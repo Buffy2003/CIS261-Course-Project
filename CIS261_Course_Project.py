@@ -41,9 +41,11 @@ def printinfo(EmpDetailList):
     # the following code creates a for loop to read through EmpDetailList and assign values in list to variables
     for EmpList in EmpDetailList:
         fromdate = EmpList[0]
-        #write code to assign values to todate, empname, hours, hourlyrate, and taxrate from EmpLst
-
-
+        todate = EmpList[1]  #write code to assign values to todate, empname, hours, hourlyrate, and taxrate from EmpLst
+        empname = EmpList[2]
+        hours = EmpList[3]
+        hourlyrate = EmpList[4]
+        taxrate = EmpList[5]
 
 
 
@@ -113,25 +115,17 @@ if __name__ == "__main__":
         #printinfo(empname, hours, hourlyrate, grosspay, taxrate, incometax, netpay)
 
         #write code to insert fromdate, todate, empname, hours, hourlyrate, and taxrate into list EmpDetail
-        def list(EmpDetail):
-            for i, empname in enumerate(EmpDetail, start=1):   #Not sure that this is right
-                print(f"{i}. {empname}")
-            print()
-
-
+        EmpDetail = [fromdate, todate, empname, hours, hourlyrate, taxrate]
+        
         #the following code appends the list EmpDetail to the list EmpDetailList
         EmpDetailList.append(EmpDetail)
     
-
-        
         #TotEmployees += 1
         #TotHours += hours
         #TotGrossPay += grosspay
         #TotTax += incometax
         #TotNetPay += netpay
 
-
-
     #PrintTotals (TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay)
     printinfo(EmpDetailList)
-    PrintTotals (EmpTotals)
+    #PrintTotals (EmpTotals)   ### Needs added back into code
