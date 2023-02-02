@@ -1,6 +1,6 @@
 # Rashelle Ward
 # CIS261
-# Course Project - Phase 1
+# Course Project - Phase 2
 def GetEmpName():
     empname = input("Enter employee name: ")
     return empname
@@ -76,7 +76,6 @@ def printinfo(EmpDetailList):
         EmpTotals["TTax"] = TotTax
         EmpTotals["Totnet"] = TotNetPay
 
-
 #def PrintTotals(TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay):    
     #print()
     #print(f"Total Number Of Employees: {TotEmployees}")
@@ -91,12 +90,11 @@ def PrintTotals(EmpTotals):
     # the following line of code prints Total Employees from the dictionary
     print(f'Total Number Of Employees: {EmpTotals["TotEmp"]}')
     # write code to print TotalHrs, TotGrossPay, TotTax and TotNetPay from dictionary
-    print(f'Total Hours Worked: {EmpTotals["Tothrs"]:,.2f}')  # <--- Needs formatted
+    print(f'Total Hours Worked: {EmpTotals["Tothrs"]:,.2f}')
     print(f'Total Gross Pay: {EmpTotals["Totgross"]:,.2f}')
     print(f'Total Income Tax: {EmpTotals["TTax"]:,.2f}')
     print(f'Total Net Pay: {EmpTotals["Totnet"]:,.2f}') 
     print()
-
 
 if __name__ == "__main__":
     #TotEmployees = 0
@@ -116,7 +114,7 @@ if __name__ == "__main__":
         hours = GetHoursWorked() 
         hourlyrate = GetHourlyRate() 
         taxrate = GetTaxRate() 
-        # COMMENT out the following code
+
         #grosspay, incometax, netpay = CalcTaxAndNetPay(hours, hourlyrate, taxrate)
         #printinfo(empname, hours, hourlyrate, grosspay, taxrate, incometax, netpay)
 
@@ -126,7 +124,6 @@ if __name__ == "__main__":
         #the following code appends the list EmpDetail to the list EmpDetailList
         EmpDetailList.append(EmpDetail) 
 
-        #Comment out the following code
         #TotEmployees += 1
         #TotHours += hours
         #TotGrossPay += grosspay
